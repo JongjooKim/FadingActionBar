@@ -281,6 +281,21 @@ public abstract class FadingActionBarHelperBase {
         listView.setOnScrollListener(mOnScrollListener);
         return contentContainer;
     }
+    
+    public int getHeaderHeight() {
+    	if(mHeaderContainer != null) {
+    		return mHeaderContainer.getHeight();
+    	} else {
+    		return 0;
+    	}
+    }
+    
+    public boolean isHeaderVisible() {
+    	if(mLastScrollPosition >= mHeaderContainer.getHeight())
+    		return false;
+    	else
+    		return true;
+    }
 
     private OnScrollListener mOnScrollListener = new OnScrollListener() {
         @Override
