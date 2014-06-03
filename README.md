@@ -84,7 +84,7 @@ How to retain list position when FadingActionbar is used?
 -------------------
 You may want to keep the current list position when new items are added/removed into or out of the list.
 For this purpose, I added just two simple methods into FadingActionbarHelperBase.java as belows.
-
+<pre><code>
 public int getHeaderHeight() {
 	if(mHeaderContainer != null) {
 		return mHeaderContainer.getHeight();
@@ -99,9 +99,9 @@ public boolean isHeaderVisible() {
 	else
 		return true;
 }
-
+</code></pre>
 Using these two methods, you can retain the curret position of ListView. The following is a code snippet illustraing how.
-
+<pre><code>
 // suppose listView is an instance of ListView. and 
 // listAdapter is an instance of BaseAdapter or ArrayAdapter.
 // fadingHelper is an instance of FadingActionBarHelper.
@@ -114,6 +114,8 @@ if(fadingHelper.isHeaderVisible()) {
 } else {
 	listView.setSelectionFromTop(index + 1, yOffset);
 }
+</code></pre>
+
 Now, you can simpley keep the position of the listview regardless of addition/removal of list items.
 
 by Jongjoo Kim
