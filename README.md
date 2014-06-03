@@ -116,7 +116,7 @@ if(fadingHelper.isHeaderVisible()) {
 }
 </code></pre>
 
-Now, you can simpley keep the position of the listview regardless of addition/removal of list items.
+Now, you can simply keep the position of the listview regardless of addition/removal of list items.
 
 by Jongjoo Kim
 
